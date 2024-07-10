@@ -30,6 +30,12 @@
               />
             </svg>
           </div>
+          <span>
+            Nos Services <br />
+            Nos Produits <br />
+            <br />
+            Demande de devis
+          </span>
         </div>
         <div class="menu-europ-modern-content gris">
           <div class="plus-svg">
@@ -45,6 +51,10 @@
               />
             </svg>
           </div>
+          <span class="span-black">
+            Actualités & <br />
+            Blog
+          </span>
         </div>
         <div class="menu-europ-modern-content short rose">
           <div class="plus-svg">
@@ -60,11 +70,14 @@
               />
             </svg>
           </div>
+          <span>Smart Home</span>
         </div>
       </div>
       <div class="menu-europ-column">
         <div class="menu-europ-modern-content long rose">
-          <span class="menu-europ-modern-big-span"> EUROP'ALU UNE HISTOIRE D'INNOVATION </span>
+          <span class="menu-europ-modern-big-span">
+            EUROP'ALU UNE HISTOIRE D'INNOVATION
+          </span>
           <div class="arrow-right">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +92,7 @@
             </svg>
           </div>
         </div>
-        <div class="menu-europ-modern-content gris">
+        <div class="menu-europ-modern-content gris background-batiment">
           <div class="plus-svg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -93,6 +106,7 @@
               />
             </svg>
           </div>
+          <span class="span-black"> Nos Réalisations </span>
         </div>
         <div class="menu-europ-modern-content violet">
           <div class="plus-svg">
@@ -108,8 +122,12 @@
               />
             </svg>
           </div>
+          <div class="recrutement-container">
+            <img src="./checklist-person.png" alt="checklist avec personne" />
+            <span>Recrutement</span>
+          </div>
         </div>
-        <div class="menu-europ-modern-content long">
+        <div class="menu-europ-modern-content long background-batiment-schuco">
           <div class="plus-svg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +140,13 @@
                 d="M8 7V3.5a.5.5 0 0 0-1 0V7H3.5a.5.5 0 0 0 0 1H7v3.5a.5.5 0 1 0 1 0V8h3.5a.5.5 0 1 0 0-1zm-.5 8a7.5 7.5 0 1 1 0-15a7.5 7.5 0 0 1 0 15"
               />
             </svg>
+            <br />
           </div>
+          <span class="span-black">
+            Fabricant et <br />
+            Installateur <br />
+            Schüco
+          </span>
         </div>
       </div>
     </div>
@@ -146,6 +170,7 @@
       #menu-europ-modern-container span {
         font-family: "Lato", sans-serif;
         color: aliceblue;
+        font-size: 25px;
       }
       .menu-europ-column {
         display: flex;
@@ -164,12 +189,33 @@
       .menu-europ-modern-content {
         width: 250px;
         height: 280px;
-        background-color: blue;
-        border-radius: 10px;
+        border-radius: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 25px 20px 50px 20px;
+        padding: 25px 20px 30px 20px;
+      }
+      .menu-europ-modern-content .span-black {
+        color: black !important;
+      }
+      .menu-europ-modern-content.background-batiment {
+        background: url(8.png) center / contain no-repeat;
+        background-position-y: 5px;
+      }
+      .menu-europ-modern-content .recrutement-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .menu-europ-modern-content .recrutement-container img {
+        width: 160px;
+      }
+      .menu-europ-modern-content.background-batiment-schuco {
+        background-image: url("10.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        justify-content: flex-start;
       }
       .menu-europ-modern-big-span {
         font-size: 30px;
