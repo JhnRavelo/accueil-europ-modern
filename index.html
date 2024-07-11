@@ -10,7 +10,6 @@
     <div class="background"></div>
     <div class="menu-modern-europ">
       <div id="menu-europ-modern-container">
-        <!-- <div class="menu-europ-column"> -->
         <div class="menu-europ-img">
           <img
             src="http://europ-alu.com/wp-content/uploads/2018/11/logo-EUROPALU-1.png"
@@ -80,8 +79,6 @@
             <span>Smart Home</span>
           </div>
         </div>
-        <!-- </div> -->
-        <!-- <div class="menu-europ-column"> -->
         <div class="menu-europ-modern-content long menu-four">
           <div class="fill rose">
             <span class="menu-europ-modern-big-span">
@@ -164,7 +161,6 @@
             </span>
           </div>
         </div>
-        <!-- </div> -->
       </div>
     </div>
     <div class="background"></div>
@@ -206,6 +202,7 @@
         background-position: center;
         background-size: cover;
       }
+      /* ---------------------MENU-------------------------- */
       .menu-modern-europ {
         display: flex;
         justify-content: center;
@@ -313,7 +310,10 @@
         justify-content: flex-end;
         color: aliceblue;
       }
+      /* ---------------------MENU-------------------------- */
+
       /* ANIMATION */
+      /* ---------------------MENU-------------------------- */
       @keyframes fillAnimation {
         from {
           height: 0;
@@ -336,9 +336,11 @@
           pointer-events: none;
         }
       }
+      /* ---------------------MENU-------------------------- */
       /* ANIMATION */
 
       /* RESPONSIVE */
+      /* ---------------------MENU-------------------------- */
       @media (max-width: 790px) {
         .menu-europ-img {
           width: 200px;
@@ -366,7 +368,6 @@
         .menu-europ-modern-content.menu-seven {
           right: 110px !important;
         }
-        
       }
       @media (max-width: 1059.5px) {
         #menu-europ-modern-container {
@@ -398,9 +399,70 @@
           margin-top: 0px;
         }
       }
-      /* @media (max-width: 890px) {
-
-      } */
+      @media (max-width: 640px) {
+        .menu-europ-img {
+          width: 170px;
+          height: 200px;
+        }
+        .menu-europ-modern-content {
+          width: 170px;
+          height: 200px;
+        }
+        .menu-europ-modern-content .fill {
+          padding: 15px 10px 10px 10px;
+        }
+        #menu-europ-modern-container {
+          width: 400px;
+          gap: 10px;
+        }
+        #menu-europ-modern-container .logo-europ-modern {
+          width: 170px;
+          height: 55px;
+        }
+        #menu-europ-modern-container span {
+          font-size: 19px;
+        }
+        .menu-europ-modern-content.short {
+          height: 120px;
+          bottom: 130px;
+          right: 180px;
+        }
+        .menu-europ-modern-content.menu-four {
+          right: -180px !important;
+          bottom: -140px;
+          height: 200px;
+        }
+        .menu-europ-modern-content.menu-two {
+          height: 120px;
+        }
+        .menu-europ-modern-content.menu-seven {
+          right: 0px !important;
+          bottom: 340px;
+          height: 260px;
+        }
+        .menu-europ-modern-content.menu-six {
+          bottom: 210px;
+          right: 0px !important;
+          height: 130px;
+        }
+        .menu-europ-modern-content .recrutement-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .menu-europ-modern-content.menu-five {
+          right: 180px;
+          bottom: -140px;
+        }
+        .menu-europ-modern-content .recrutement-container img {
+          width: 120px;
+        }
+        .menu-europ-modern-big-span {
+          font-size: 20px !important;
+          line-height: normal;
+        }
+      }
+      /* ---------------------MENU-------------------------- */
       /* RESPONSIVE */
     </style>
   </body>
