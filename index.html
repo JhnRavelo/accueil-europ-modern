@@ -212,11 +212,10 @@
       }
       #menu-europ-modern-container {
         flex-wrap: wrap;
-        width: 90%;
+        width: 1060px;
         gap: 20px;
         display: flex;
         justify-content: center;
-        padding: 40px;
       }
       #menu-europ-modern-container span {
         font-family: "Lato", sans-serif;
@@ -246,8 +245,11 @@
         color: black !important;
       }
       .fill.background-batiment {
-        background: url(8.png) center / contain no-repeat;
         background-position-y: 5px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("8.png");
       }
       .menu-europ-modern-content .recrutement-container {
         display: flex;
@@ -337,10 +339,36 @@
       /* ANIMATION */
 
       /* RESPONSIVE */
-      @media (max-width: 1024px) {
+      @media (max-width: 790px) {
+        .menu-europ-img {
+          width: 200px;
+        }
+        .menu-europ-modern-content {
+          width: 200px;
+        }
+        #menu-europ-modern-container .logo-europ-modern {
+          width: 200px;
+          height: 75px;
+        }
+        #menu-europ-modern-container span {
+          font-size: 20px;
+        }
+        .menu-europ-modern-big-span {
+          font-size: 22px !important;
+          line-height: normal;
+        }
+        .menu-europ-modern-content.menu-four {
+          right: 220px !important;
+        }
+        .menu-europ-modern-content.menu-six {
+          right: 110px !important;
+        }
+        .menu-europ-modern-content.menu-seven {
+          right: 110px !important;
+        }
         
       }
-      @media (max-width: 1024px) {
+      @media (max-width: 1059.5px) {
         #menu-europ-modern-container {
           padding: 0;
           width: 100%;
