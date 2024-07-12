@@ -205,26 +205,26 @@
               <span>Fenêtres</span>
             </div>
           </a>
-          <a href="https://3d.europ-alu.com/produits/portes">
-            <div class="navigation-europ-modern-card long rose">
+          <div class="navigation-europ-modern-card long rose">
+              <a href="https://3d.europ-alu.com/produits/portes">
               <div class="navigation-europ-modern-card-img"></div>
               <span>Portes</span>
+            </a>
             </div>
-          </a>
           <a href="https://3d.europ-alu.com/produits/baies">
             <div class="navigation-europ-modern-card orange long">
               <img src="./baie.webp" alt="photo baies aluminium" />
               <span>Baies vitrées</span>
             </div>
           </a>
-          <a
-            href="http://localhost:5173/produits/am%C3%A9nagement-ext%C3%A9rieur#Pergolas"
-          >
-            <div class="navigation-europ-modern-card rose short">
+          <div class="navigation-europ-modern-card rose short">
+              <a
+                href="http://localhost:5173/produits/am%C3%A9nagement-ext%C3%A9rieur#Pergolas"
+              >
               <img src="./pergolas.jpg" alt="photo pergolas aluminium" />
               <span>Pergolas</span>
-            </div>
-          </a>
+            </a>
+          </div>
           <a
             href="http://localhost:5173/produits/am%C3%A9nagement-int%C3%A9rieur#Cloisons"
           >
@@ -327,7 +327,7 @@
         });
 
         navigationObserver.observe(
-          document.querySelector(".navigation-europ-modern-card")
+          document.querySelector(".navigation-europ-modern-content")
         );
 
         presentationObserver.observe(
@@ -801,6 +801,81 @@
           padding: 10px;
         }
         /* ---------------------PRESENTATION-------------------------- */
+      }
+      @media (max-width: 1190px) {
+        .navigation-europ-modern-content {
+          flex-direction: column;
+          gap: 25px;
+        }
+        .navigation-europ-modern-card-container:last-child {
+          width: 540px;
+          align-self: center;
+          gap: 15px;
+        }
+        .navigation-europ-modern-card-container:last-child .navigation-europ-modern-card {
+          width: 262.5px;
+        }
+      }
+      @media (max-width: 850px) {
+        .navigation-europ-modern-card-container:first-child {
+          width: 540px;
+          column-gap: 15px;
+        }
+        .navigation-europ-modern-card-container:first-child .navigation-europ-modern-card {
+          width: 170px;
+          padding: 10px;
+        }
+        .navigation-europ-modern-card.wide {
+          width: 262.5px !important;
+        }
+        .navigation-europ-modern-container span {
+          font-size: 20px;
+        }
+        .navigation-europ-modern-card-img {
+          height: 190px;
+        }
+        .navigation-europ-modern-card.long img {
+          height: 190px;
+        }
+      }
+      @media (max-width: 560px) {
+        .navigation-europ-modern-content {
+          gap: 15px;
+        }
+        .navigation-europ-modern-card-container:first-child {
+          width: 355px;
+          row-gap: 15px;
+        }
+        .navigation-europ-modern-card.wide {
+          width: 170px !important;
+          height: 150px;
+        }
+        .navigation-europ-modern-card.long img {
+          height: 120px;
+        }
+        .navigation-europ-modern-card-img {
+          height: 120px;
+          margin-bottom: 10px;
+        }
+        .navigation-europ-modern-card img {
+          margin-bottom: 10px;
+        }
+        .navigation-europ-modern-card-container:last-child {
+          width: 355px;
+        }
+        .navigation-europ-modern-card-container:last-child .navigation-europ-modern-card {
+          width: 170px;
+        }
+        .navigation-europ-modern-card.large {
+          height: 280px;
+        }
+        .navigation-europ-modern-card.mid {
+          height: 220px;
+          padding: 10px;
+        }
+        .navigation-europ-modern-card.mid img {
+          height: 150px;
+        }
       }
       /* ---------------------MENU-------------------------- */
       /* RESPONSIVE */
