@@ -163,10 +163,42 @@
         </div>
       </div>
     </div>
+    <div class="presentation-europ-modern-container">
+      <div class="presentation-europ-modern-content">
+        <div class="fill-presentation">
+          <div class="presentation-europ-modern-para">
+            <p>
+              Depuis 2005, <span class="span-bold">Europ'Alu</span> a entrepris
+              un voyage extraordinaire pour devenir la référence incontournable
+              en menuiseries aluminium et habillage de façade sur la Grande Île.
+              Une équipe multiculturelle et expérimentée, toujours à l'écoute
+              des nouvelles tendances et
+              <span class="span-bold">normes internationales</span>.
+              <br />
+              <br />
+              Qu'il s'agisse de matériaux, de technologies ou d'outillages, nous
+              sommes constamment à la pointe de l'innovation. Cette vigilance
+              nous permet de proposer des gammes de produits originales et
+              avant-gardistes, souvent en avant-première à
+              <span class="span-bold">Madagascar</span>.
+              <br />
+              <br />
+              Chaque jour, nous mettons notre passion et notre expertise au
+              service de vos projets, pour transformer vos visions en réalités
+              architecturales uniques. Chez
+              <span class="span-bold">Europ'Alu</span>, nous ne suivons pas les
+              tendances, nous les créons. Bienvenue dans notre monde de
+              créativité et d'innovation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="background"></div>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const fillElement = document.querySelectorAll(".fill");
+        const fillPresentation = document.querySelector(".fill-presentation");
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -183,6 +215,22 @@
             }
           });
         });
+
+        const presentationObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              fillPresentation.classList.remove("inactive");
+              fillPresentation.classList.add("active");
+            } else {
+              fillPresentation.classList.remove("active");
+              fillPresentation.classList.add("inactive");
+            }
+          });
+        });
+
+        presentationObserver.observe(
+          document.querySelector(".presentation-europ-modern-para")
+        );
 
         observer.observe(document.querySelector(".menu-europ-modern-content"));
       });
@@ -242,8 +290,7 @@
         color: black !important;
       }
       .fill.background-batiment {
-        background-position-y: 5px;
-        background-position: center;
+        background-position-y: 15px;
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url("8.png");
@@ -312,6 +359,47 @@
       }
       /* ---------------------MENU-------------------------- */
 
+      /* ---------------------PRESENTATION-------------------------- */
+      .presentation-europ-modern-container {
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+      }
+      .presentation-europ-modern-content {
+        width: 90%;
+        height: auto;
+      }
+      .fill-presentation {
+        background-color: #fa0644;
+        border-radius: 20px;
+        height: 0;
+        width: 100%;
+        padding: 25px;
+        background-image: url("pres-background.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+      }
+      .fill-presentation.active {
+        animation: fillAnimation 3s forwards;
+      }
+      .fill-presentation.inactive {
+        animation: emptyAnimation 1s forwards;
+      }
+      .presentation-europ-modern-para {
+        width: 42%;
+      }
+      .presentation-europ-modern-para p {
+        font-family: "Lato", sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 30px;
+        color: aliceblue;
+      }
+      .span-bold {
+        font-weight: 600;
+      }
+      /* ---------------------PRESENTATION-------------------------- */
       /* ANIMATION */
       /* ---------------------MENU-------------------------- */
       @keyframes fillAnimation {
