@@ -249,6 +249,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         const fillElement = document.querySelectorAll(".fill");
         const fillPresentation = document.querySelector(".fill-presentation");
+        const spanNavigation = document.querySelectorAll(".navigation-europ-modern-card span");
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -277,6 +278,28 @@
             }
           });
         });
+
+        const navigationObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if(entry.isIntersecting) {
+              spanNavigation.forEach((navigation, index) => {               
+                setTimeout(() => {
+                  navigation.classList.remove("inactive");
+                  navigation.classList.add("active");
+                }, index * 500);
+              });                
+            } else {
+              spanNavigation.forEach((navigation, index) => {
+                navigation.classList.remove("active");
+                navigation.classList.add("inactive");
+              });
+            }
+          })
+        })
+
+        navigationObserver.observe(
+          document.querySelector(".navigation-europ-modern-card")
+        );
 
         presentationObserver.observe(
           document.querySelector(".presentation-europ-modern-para")
@@ -461,6 +484,14 @@
         font-size: 26px;
         font-family: 'Lato', sans-serif;
         font-weight: 400;
+        opacity: 0;
+        transition: opacity 2s;
+      }
+      .navigation-europ-modern-card span.active {
+        opacity: 1;
+      }
+      .navigation-europ-modern-card span.inactive {
+        opacity: 0;
       }
       .navigation-europ-modern-content {
         display: flex;
