@@ -18,6 +18,7 @@
           />
         </div>
         <div class="menu-europ-modern-content menu-one">
+          <a href="https://3d.europ-alu.com/">
           <div class="fill orange">
             <div class="plus-svg">
               <svg
@@ -39,6 +40,7 @@
               Demande de devis
             </span>
           </div>
+        </a>
         </div>
         <div class="menu-europ-modern-content menu-two">
           <div class="fill gris">
@@ -191,6 +193,48 @@
               créativité et d'innovation.
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-europ-modern-container">
+      <div class="navigation-europ-modern-content">
+        <div class="navigation-europ-modern-card-container">
+          <div class="navigation-europ-modern-card orange long">
+            <img src="./fenetre.webp" alt="photo fenêtres aluminium">
+            <span>Fenêtres</span>
+          </div>
+          <div class="navigation-europ-modern-card long rose">
+            <div class="navigation-europ-modern-card-img">
+            </div>
+            <span>Portes</span>
+          </div>
+          <div class="navigation-europ-modern-card orange long">
+            <img src="./baie.webp" alt="photo baies aluminium">
+            <span>Baies vitrées</span>
+          </div>
+          <div class="navigation-europ-modern-card rose short">
+            <img src="./pergolas.jpg" alt="photo pergolas aluminium">
+            <span>Pergolas</span>
+          </div>
+          <div class="navigation-europ-modern-card short violet">
+            <img src="./cloison.webp" alt="photo cloison aluminium">
+            <span>Cloison</span>
+          </div>
+          <div class="navigation-europ-modern-card rose short">
+            <img src="./garde corps.jpg" alt="photo garde corps aluminium">
+            <span>Garde corps</span>
+          </div>
+          <div class="navigation-europ-modern-card orange wide">
+            <img src="./fermeture.webp" alt="photo fermeture extérieure aluminium">
+            <span>Fermeture extérieure</span>
+          </div>
+          <div class="navigation-europ-modern-card orange wide">
+            <img src="./moustiquaire.jpg" alt="photo moustiquaire aluminium">
+            <span>Moustiquaire</span>
+          </div>
+        </div>
+        <div class="navigation-europ-modern-card-container">
+
         </div>
       </div>
     </div>
@@ -400,6 +444,84 @@
         font-weight: 600;
       }
       /* ---------------------PRESENTATION-------------------------- */
+      /* ---------------------NAVIGATION-------------------------- */
+      .navigation-europ-modern-container {
+        margin-top: 90px;
+        display: flex;
+        justify-content: center;
+      }
+      .navigation-europ-modern-container span {
+        color: aliceblue;
+        font-size: 26px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+      }
+      .navigation-europ-modern-content {
+        display: flex;
+        gap: 40px;
+      }
+      .navigation-europ-modern-card-container:first-child {
+        width: 830px;
+      }
+      .navigation-europ-modern-card-container {
+        display: flex;
+        row-gap: 25px;
+        column-gap: 40px;
+        flex-wrap: wrap;
+      }
+      .navigation-europ-modern-card-img {
+        width: 100%;
+        height: 220px;
+        background-image: url(porte.webp);
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        margin-bottom: 15px;
+      }
+      .navigation-europ-modern-card {
+        width: 250px;
+        border-radius: 20px;
+        height: auto;
+      }
+      .navigation-europ-modern-card.long {
+        padding: 10px 20px 20px 20px;
+      }
+      .navigation-europ-modern-card.long img {
+        height: 220px;
+      }
+      .navigation-europ-modern-card.short {
+        padding: 10px;
+      }
+      .navigation-europ-modern-card.short img{
+        height: 120px;
+        margin-bottom: 10px;
+      }
+      .navigation-europ-modern-card.wide {
+        padding: 10px;
+        width: 395px;
+        height: 130px;
+      }
+      .navigation-europ-modern-card.wide img {
+        height: 70px;
+        margin-bottom: 10px;
+      }
+      .navigation-europ-modern-card.orange {
+        background-color: #fa5300;
+      } 
+      .navigation-europ-modern-card.rose {
+        background-color: #fa0644;
+      }
+      .navigation-europ-modern-card.violet {
+        background-color: #333652;
+      }
+      .navigation-europ-modern-card img {
+        border-radius: 15px;
+        width: 100%;
+        margin-bottom: 15px;
+        object-fit: cover;
+      }
+      /* ---------------------NAVIGATION-------------------------- */
       /* ANIMATION */
       /* ---------------------MENU-------------------------- */
       @keyframes fillAnimation {
