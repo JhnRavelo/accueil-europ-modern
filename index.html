@@ -363,12 +363,26 @@
     </div>
     <div class="background"></div>
     <script>
+      let lastScrollTop = 0;
+      let whereScroll = "down";
+      window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          whereScroll = "down";
+        } else {
+          whereScroll = "up";
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      }, false);
+
       document.addEventListener("DOMContentLoaded", () => {
         const fillElement = document.querySelectorAll(".fill");
         const fillPresentation = document.querySelector(".fill-presentation");
         const spanNavigation = document.querySelectorAll(
           ".navigation-europ-modern-card span"
         );
+        const paraEntreprise = document.querySelector(".para-entreprise-container");
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -415,6 +429,18 @@
             }
           });
         });
+
+        const entrepriseObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if(entry.isIntersecting && whereScroll == "down") {
+              paraEntreprise.classList.add("active");
+            }else {
+              paraEntreprise.classList.remove("active");
+            }
+          });
+        });
+
+        entrepriseObserver.observe(document.querySelector(".entreprise-europ-modern-container"));
 
         navigationObserver.observe(
           document.querySelector(".navigation-europ-modern-content")
@@ -770,6 +796,9 @@
         font-size: 20px;
         line-height: 30px;
       }
+      .para-entreprise-container.active {
+        animation: upAnimation 2s ease;
+      }
       /* ---------------------ENTREPRISE-------------------------- */
       /* ANIMATION */
       /* ---------------------MENU-------------------------- */
@@ -795,6 +824,17 @@
           pointer-events: none;
         }
       }
+      @keyframes upAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+        }
+      }
+      
       /* ---------------------MENU-------------------------- */
       /* ANIMATION */
 
