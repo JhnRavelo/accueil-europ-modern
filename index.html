@@ -7,9 +7,7 @@
   </head>
   <body>
     <div class="background-modern-europ">
-      <div class="background-image-modern">
-        <img src="./background/batiment.png" alt="bâtiment Galaxy Village">
-      </div>
+      <div class="background-image-modern"></div>
     </div>
     <div class="menu-modern-europ">
       <div id="menu-europ-modern-container">
@@ -531,10 +529,12 @@
         justify-content: flex-end;
         display: flex;
         align-items: flex-end;
-      }
-      .background-image-modern img {
-        width: 100%;
-        object-fit: contain;
+        background-image: url("background/batiment.png");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 100%;
       }
       /* ---------------------BACKGROUND-------------------------- */
       /* ---------------------MENU-------------------------- */
@@ -929,17 +929,14 @@
       ::-webkit-scrollbar {
         width: 8px;
       }
-
       ::-webkit-scrollbar-track {
         background: #f1f1f1;
       }
-
       ::-webkit-scrollbar-thumb {
         background-color: #888;
         border-radius: 5px;
         border: 1px solid #f1f1f1;
       }
-
       ::-webkit-scrollbar-thumb:hover {
         background: #555;
       }
@@ -1082,6 +1079,11 @@
         /* ---------------------ENTREPRISE-------------------------- */
       }
       @media (max-width: 640px) {
+        /* ---------------------BACKGROUND-------------------------- */
+        .background-image-modern {
+          background-image: url("background/batiment-one.png") !important;
+        }
+        /* ---------------------BACKGROUND-------------------------- */
         /* ---------------------MENU-------------------------- */
         .menu-europ-img {
           width: 170px;
@@ -1200,6 +1202,12 @@
         /* ---------------------PRESENTATION-------------------------- */
       }
       @media (max-width: 1190px) {
+        /* ---------------------BACKGROUND-------------------------- */
+        .background-image-modern {
+          background-image: url("background/batiment-two.png");
+          background-size: contain;
+        }
+        /* ---------------------BACKGROUND-------------------------- */
         /* ---------------------NAVIGATION-------------------------- */
         .navigation-europ-modern-content {
           flex-direction: column;
