@@ -4,14 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="background-modern-europ">
       <div class="background-image-modern">
-        <img src="./background/1.png" alt="bâtiment Arkadin" class="batiment-one">
-        <img src="./background/2.png" alt="bâtiment Discodin" class="batiment-two">
-        <img src="./background/3.png" alt="bâtiment Galaxy Village" class="batiment-three">
+        <img src="./background/batiment.png" alt="bâtiment Galaxy Village">
       </div>
     </div>
     <div class="menu-modern-europ">
@@ -522,20 +519,22 @@
       /* ---------------------BACKGROUND-------------------------- */
       .background-modern-europ {
         background-image: url("./background/fond-1.jpg");
-        background-position: center;
+        background-position: top;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         height: 100vh;
         margin-bottom: 70px;
         display: flex;
-        justify-content: flex-end;
       }
       .background-image-modern {
+        justify-content: flex-end;
         display: flex;
+        align-items: flex-end;
       }
       .background-image-modern img {
-        width: 33.33%;
+        width: 100%;
+        object-fit: contain;
       }
       /* ---------------------BACKGROUND-------------------------- */
       /* ---------------------MENU-------------------------- */
@@ -1298,34 +1297,5 @@
       }
       /* RESPONSIVE */
     </style>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js"
-      integrity="sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script>
-      const batimentOne = document.querySelector(".batiment-one");
-      const batimentTwo = document.querySelector(".batiment-two");
-      const batimentThree = document.querySelector(".batiment-three");
-
-      new simpleParallax(batimentOne, {
-        overflow: true,
-        orientation: 'up',
-        scale: 1.7
-      });
-      new simpleParallax(batimentTwo, {
-        overflow: true,
-        orientation: 'up',
-        scale: 1.5,
-        delay: .8,
-      })
-      new simpleParallax(batimentThree, {
-        overflow: true,
-        orientation: 'up',
-        scale: 1.4,
-        delay: .8,
-      })
-    </script>
   </body>
 </html>
