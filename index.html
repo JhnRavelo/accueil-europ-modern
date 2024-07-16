@@ -347,13 +347,13 @@
           exceptionnels qui nous ont fait confiance pour concrétiser leurs
           projets. <br />
           <br />
-          Leur satisfaction est notre plus grande réussite et témoigne de
-          notre engagement envers l'excellence. Voici quelques-uns des clients
-          prestigieux qui ont choisi Europ'Alu pour leurs besoins en
-          menuiseries aluminium et habillage de façade. <br />
+          Leur satisfaction est notre plus grande réussite et témoigne de notre
+          engagement envers l'excellence. Voici quelques-uns des clients
+          prestigieux qui ont choisi Europ'Alu pour leurs besoins en menuiseries
+          aluminium et habillage de façade. <br />
           <br />
-          Merci à chacun d'entre eux pour leur confiance et leur fidélité.
-          Nous sommes fiers de continuer à bâtir ensemble des réalisations
+          Merci à chacun d'entre eux pour leur confiance et leur fidélité. Nous
+          sommes fiers de continuer à bâtir ensemble des réalisations
           remarquables, en repoussant les limites de l'innovation et de la
           qualité. <br />
           <br />
@@ -361,20 +361,52 @@
         </p>
       </div>
     </div>
+    <div class="iso-europ-modern-container">
+      <div class="photo-iso-container">
+        <div class="photo-iso">
+          <img src="./iso.png" alt="certification iso" />
+        </div>
+        <span>
+          UNE CERTIFICATION <br />
+          ISO 9001 : 2015
+        </span>
+      </div>
+      <div class="iso-image-background">
+        <div class="iso-para-container">
+          <span>
+            Chez Europ'Alu, nous sommes fiers d'avoir obtenu la certification
+            ISO 9001, une norme internationale reconnue pour le management de la
+            qualité. <br />
+            <br />Cette certification garantit que nos processus sont
+            rigoureusement structurés et optimisés pour offrir des produits et
+            services de haute qualité. <br />
+            <br />Pour nos clients, cela signifie une confiance accrue dans
+            notre capacité à répondre à leurs besoins avec des solutions fiables
+            et efficaces, tout en respectant les meilleures pratiques du
+            secteur.
+          </span>
+        </div>
+      </div>
+    </div>
     <div class="background"></div>
     <script>
       let lastScrollTop = 0;
       let whereScroll = "down";
-      window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      window.addEventListener(
+        "scroll",
+        function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-          whereScroll = "down";
-        } else {
-          whereScroll = "up";
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-      }, false);
+          if (scrollTop > lastScrollTop) {
+            whereScroll = "down";
+          } else {
+            whereScroll = "up";
+          }
+          lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        },
+        false
+      );
 
       document.addEventListener("DOMContentLoaded", () => {
         const fillElement = document.querySelectorAll(".fill");
@@ -382,7 +414,9 @@
         const spanNavigation = document.querySelectorAll(
           ".navigation-europ-modern-card span"
         );
-        const paraEntreprise = document.querySelector(".para-entreprise-container");
+        const paraEntreprise = document.querySelector(
+          ".para-entreprise-container"
+        );
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -432,15 +466,17 @@
 
         const entrepriseObserver = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
-            if(entry.isIntersecting && whereScroll == "down") {
+            if (entry.isIntersecting && whereScroll == "down") {
               paraEntreprise.classList.add("active");
-            }else {
+            } else {
               paraEntreprise.classList.remove("active");
             }
           });
         });
 
-        entrepriseObserver.observe(document.querySelector(".entreprise-europ-modern-container"));
+        entrepriseObserver.observe(
+          document.querySelector(".entreprise-europ-modern-container")
+        );
 
         navigationObserver.observe(
           document.querySelector(".navigation-europ-modern-content")
@@ -790,7 +826,7 @@
         width: 720px;
       }
       .para-entreprise-container p {
-        font-family: 'Lato', sans-serif;
+        font-family: "Lato", sans-serif;
         color: aliceblue;
         font-weight: 400;
         font-size: 20px;
@@ -800,6 +836,78 @@
         animation: upAnimation 2s ease;
       }
       /* ---------------------ENTREPRISE-------------------------- */
+      /* ---------------------ISO-------------------------- */
+      .iso-europ-modern-container {
+        margin-top: 90px;
+      }
+      .photo-iso-container {
+        padding-left: 70px;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+      .photo-iso {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fa5300;
+        border-radius: 5px;
+        width: 100px;
+        height: 100px;
+      }
+      .photo-iso img {
+        width: 80px;
+      }
+      .photo-iso-container span {
+        font-family: "Lato", sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 50px;
+      }
+      .iso-image-background {
+        margin-top: 40px;
+        background-image: url(./europ-alu-background.webp);
+        background-size: 1000px;
+        background-position: right;
+        background-repeat: no-repeat;
+        height: 640px;
+      }
+      .iso-para-container {
+        width: 585px;
+        height: 370px;
+        background-image: url("./iso-para.webp");
+        background-size: cover;
+        background-position: center;
+        padding: 15px;
+        margin-left: 70px;
+        border-radius: 10px;
+      }
+      .iso-para-container span {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        line-height: 28px;
+        font-size: 20px;
+      }
+      /* ---------------------ISO-------------------------- */
+      /* ---------------------SCROLL-------------------------- */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+        border: 1px solid #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      /* ---------------------SCROLL-------------------------- */
       /* ANIMATION */
       /* ---------------------MENU-------------------------- */
       @keyframes fillAnimation {
@@ -825,16 +933,16 @@
         }
       }
       @keyframes upAnimation {
-      0% {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
-      
+
       /* ---------------------MENU-------------------------- */
       /* ANIMATION */
 
@@ -1060,7 +1168,7 @@
         }
       }
       @media (max-width: 560px) {
-      /* ---------------------NAVIGATION-------------------------- */
+        /* ---------------------NAVIGATION-------------------------- */
         .navigation-europ-modern-content {
           gap: 15px;
         }
@@ -1099,15 +1207,21 @@
         .navigation-europ-modern-card.mid img {
           height: 150px;
         }
-      /* ---------------------NAVIGATION-------------------------- */
-      /* ---------------------ENTREPRISE-------------------------- */
-      .para-entreprise-container {
-        width: 360px;
-        padding: 10px;
-      }
-      /* ---------------------ENTREPRISE-------------------------- */
+        /* ---------------------NAVIGATION-------------------------- */
+        /* ---------------------ENTREPRISE-------------------------- */
+        .para-entreprise-container {
+          width: 360px;
+          padding: 10px;
+        }
+        /* ---------------------ENTREPRISE-------------------------- */
       }
       /* RESPONSIVE */
     </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/simple-parallax-js/5.6.2/simpleParallax.min.js"
+      integrity="sha512-rLJmRoYJNB5AXXLAElKPeaSrcXDUTA41fiwTZ+S2JJXhMoWu4yQZvXlZZSIjRNVHYTkIYYw+r45wXCao49D5XA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </body>
 </html>
