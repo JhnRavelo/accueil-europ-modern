@@ -417,6 +417,7 @@
         const paraEntreprise = document.querySelector(
           ".para-entreprise-container"
         );
+        const paraIso = document.querySelector(".iso-para-container");
 
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
@@ -473,6 +474,18 @@
             }
           });
         });
+
+        const isoParaObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && whereScroll == "down") {
+              paraIso.classList.add("active");
+            }else {
+              paraIso.classList.remove("active");
+            }
+          })
+        })
+
+        isoParaObserver.observe(document.querySelector(".iso-image-background"));
 
         entrepriseObserver.observe(
           document.querySelector(".entreprise-europ-modern-container")
@@ -888,6 +901,9 @@
         line-height: 28px;
         font-size: 20px;
       }
+      .iso-para-container.active {
+        animation: upAnimation 2s forwards;
+      }
       /* ---------------------ISO-------------------------- */
       /* ---------------------SCROLL-------------------------- */
       ::-webkit-scrollbar {
@@ -935,7 +951,7 @@
       @keyframes upAnimation {
         0% {
           opacity: 0;
-          transform: translateY(50px);
+          transform: translateY(100px);
         }
         100% {
           opacity: 1;
