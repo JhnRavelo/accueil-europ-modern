@@ -236,7 +236,7 @@
         <div class="logo-content black">
           <img src="http://europ-alu.com/wp-content/uploads/2024/07/canal-plus.png" alt="logo canal plus" />
         </div>
-        <div class="logo-content blue">
+        <div class="logo-content white">
           <img src="http://europ-alu.com/wp-content/uploads/2024/07/orange.png" alt="logo orange" />
         </div>
         <div class="logo-content blue">
@@ -320,7 +320,7 @@
           <img src="http://europ-alu.com/wp-content/uploads/2024/07/sanifer.png" alt="logo sanifer" />
         </div>
         <div class="logo-content blue">
-          <img src="http://europ-alu.com/wp-content/uploads/2024/07/telma.png" alt="logo telma" />
+          <img src="http://europ-alu.com/wp-content/uploads/2024/07/axian.png" alt="logo telma" />
         </div>
         <div class="logo-content black">
           <img src="http://europ-alu.com/wp-content/uploads/2024/07/logo_Vertec.png" alt="logo vertec" />
@@ -548,9 +548,14 @@
       height: 100%;
     }
 
+    .modern-europ-chevron-down {
+      position: absolute;
+      top: 30vh;
+    }
+
     .modern-europ-chevron-down svg {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       color: #1C2E3A;
       animation: downAnimation 3s ease infinite;
     }
@@ -935,6 +940,7 @@
 
     .logo-content.white {
       background-color: #fff;
+      border: 1px solid #989a9b;
     }
 
     .logo-content img {
@@ -995,6 +1001,7 @@
       font-weight: 600;
       font-size: 32px;
       line-height: 50px;
+      color: #000;
     }
 
     .iso-image-background {
@@ -1022,6 +1029,7 @@
       font-weight: 400;
       line-height: 28px;
       font-size: 20px;
+      color: #000;
     }
 
     .iso-para-container.active {
@@ -1240,7 +1248,17 @@
         background-image: url("http://europ-alu.com/wp-content/uploads/2024/07/batiment-one.png") !important;
         background-size: cover !important;
       }
-
+      .background-modern-europ img {
+        width: 310px !important;
+        margin-top: 15px !important;
+      }
+      .modern-europ-chevron-down svg {
+        width: 110px !important;
+        height: 110px !important;
+      }
+      .modern-europ-chevron-down {
+        top: 20vh !important;
+      }
       /* ---------------------BACKGROUND-------------------------- */
       /* ---------------------MENU-------------------------- */
       .menu-europ-img {
@@ -1329,6 +1347,9 @@
       .fill-presentation {
         background-image: none !important;
       }
+      .presentation-europ-modern-container {
+        height: auto !important;
+      }
 
       /* ---------------------PRESENTATION-------------------------- */
       /* ---------------------PRESENTATION-------------------------- */
@@ -1387,7 +1408,11 @@
     }
 
     @media (max-width: 400px) {
-
+      /* ---------------------MENU-------------------------- */
+      #menu-europ-modern-container {
+        height: 680px !important;
+      }
+      /* ---------------------MENU-------------------------- */
       /* ---------------------PRESENTATION-------------------------- */
       .fill-presentation {
         padding: 10px;
@@ -1403,7 +1428,15 @@
         background-image: url("http://europ-alu.com/wp-content/uploads/2024/07/batiment-two.png");
         background-size: contain;
       }
-
+      .background-modern-europ img {
+        margin-top: 30px;
+        width: 500px;
+      }
+      .modern-europ-chevron-down svg {
+        margin-top: 50px;
+        width: 180px;
+        height: 180px;
+      }
       /* ---------------------BACKGROUND-------------------------- */
       /* ---------------------NAVIGATION-------------------------- */
       .navigation-europ-modern-content {
